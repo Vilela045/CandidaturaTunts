@@ -9,19 +9,23 @@ Worksheet = sh.sheet1
 
 p1Aux = Worksheet.get('D4:D27')
 p2Aux = Worksheet.get('E4:E27')
-p3Aux = Worksheet.get('F4:F27')     #This part creates an 3 lists of lists 
+p3Aux = Worksheet.get('F4:F27')     #This part creates an 4 lists of lists 
+faltasAux = Worksheet.get('C4:C27')
 p1 = []
 p2 = []
 p3 = []
+faltas = []
 
 for x in range(24):                 #This 'for' transforms the previous list of lists, in a single list! for the three columns
     a = list(map(int,p1Aux[x]))
     b = list(map(int,p2Aux[x]))     #the information is turned into 'int' so we can use it later
     c = list(map(int,p3Aux[x]))
+    d = list(map(int,faltasAux[x]))
     
-    p1 = p1+a
-    p2 = p2+b
-    p3 = p3+c
+    p1 += a
+    p2 += b
+    p3 += c
+    faltas += d
 
 sit = ['none']*24
 final = ['none']*24         #defined a size for this lists so the 'index out of range' error wouldn't happen
@@ -30,18 +34,23 @@ for x in range(24):         #this 'for' fills 2 lists using the previous generat
 
     m = (p1[x]+p2[x]+p3[x])/3       #grade average
 
-    if m >= 70:
-        sit[x] = ' Aprovado'
-        final[x] = '0'
+    if faltas[x] <= 60 * 0.25:
+        if m >= 70:
+            sit[x] = ' Aprovado'
+            final[x] = '0'                  #calculating student situation
+                                            
+        elif m < 50:
+            sit[x] = 'Reprovado por Nota'
+            final[x] = '0'
 
-    elif m < 50:
-        sit[x] = 'Reprovado por Nota'
-        final[x] = '0'
-
+        else:
+            sit[x] = 'Exame final'
+            final[x] = str(int(140 - m))    #in the information we had this formula: 5 <= (m + naf)/2
+                                            #but it made much more sense to use the value as 70 (the minimum required to be approved)
     else:
-        sit[x] = 'Exame final'
-        final[x] = str(int(140 - m))    #in the information we had this formula: 5 <= (m + naf)/2
-                                        #but it made much more sense to use the value as 70 (the minimum required to be approved)
+        sit[x] = 'Reprovado por Falta'
+        final[x] = '0'
+
 cell_list = Worksheet.range('G4:G27')
 cell_values = sit
 
