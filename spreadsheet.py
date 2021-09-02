@@ -16,7 +16,7 @@ p2 = []
 p3 = []
 faltas = []
 
-for x in range(24):                 #This 'for' transforms the previous list of lists, in a single list! for the three columns
+for x in range(24):                 #This 'for' transforms the previous list of lists, in a single list! for the 4 columns
     a = list(map(int,p1Aux[x]))
     b = list(map(int,p2Aux[x]))     #the information is turned into 'int' so we can use it later
     c = list(map(int,p3Aux[x]))
