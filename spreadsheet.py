@@ -1,7 +1,7 @@
 import gspread      #library used to have access to the Google Sheets
 from gspread.models import Worksheet
 
-gc = gspread.service_account(filename='C:/Users/Nicolas/Desktop/CandidaturaTunts/service_account.json')     #credentials to access the APIs
+gc = gspread.service_account(filename='./service_account.json')     #credentials to access the APIs
 
 sh = gc.open_by_key("1R70ID1062jQHL1VDNLsy_lBlEFKU_MF8E0vHxy2eZhA")     #copied sheet access key (found in URL)
 
