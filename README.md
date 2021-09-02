@@ -1,23 +1,24 @@
 # Desafio Tunts
 
-# Dependencies:
+## Dependencies:
 
-pip install gspread
-pip install oauth2client
+* pip install gspread
+* pip install oauth2client
 
-# Executing:
+## Executing:
 
     You just need to open the .py file with the .json in the same folder.
 
-# Documentation:
+## Documentation:
 
--> Made using:
-    Python 3.9.4 
-    Windows 10 64bit
-    gspread 4.0.0
-    oauth2client 4.1.3
+### Made using:
+* Python 3.9.4 
+* Windows 10 64bit
+* gspread 4.0.0
+* oauth2client 4.1.3
 
--> Functionality:
+### Functionality:
+
     Program consists in accessing a google spreadsheet gattering data and using it for calculate the situation of 24 different students,
     after that, it updates the sheet with the situation and grades needed to be approved (if possible and necessary).
 
