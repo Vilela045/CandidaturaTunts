@@ -9,7 +9,7 @@ Worksheet = sh.sheet1
 
 p1Aux = Worksheet.get('D4:D27')
 p2Aux = Worksheet.get('E4:E27')
-p3Aux = Worksheet.get('F4:F27')     #This part creates an 4 lists of lists 
+p3Aux = Worksheet.get('F4:F27')     #This part creates 4 lists of lists 
 faltasAux = Worksheet.get('C4:C27')
 p1 = []
 p2 = []
