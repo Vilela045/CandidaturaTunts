@@ -27,5 +27,5 @@
     in separete lists, simple operations are then used to calculate everything and store it in sperate lists again, finally, using a function from gspread
     in a simple loop, it updates the columns in the specified range with the information.
 
-    Python was used because of the simplicity and the existing of the previously created library gspread, making the funcitionality and writing much simpler
+    Python was used because of the simplicity and the existense of the previously created library gspread, making the funcitionality and writing much simpler
     and compact.
