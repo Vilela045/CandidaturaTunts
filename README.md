@@ -7,7 +7,7 @@
 
 ## Executing:
 
-    You just need to open the .py file with the .json in the same folder.
+    You just need to run the .py file with the .json in the same folder.
 
 ## Documentation:
 
@@ -24,7 +24,7 @@
 
     First of all it gets the credentials to use google APIs from the .json file (using a service account created previously in Google Cloud Platform),
     then the program uses the gspread library to get access to the sheet using part of the URL, it proceeds to get the information needed and stores it
-    in separete lists, simple operations are then used to calculate everything and store it in sperate lists again, finally, using a function from gspread
+    in separate lists, simple operations are then used to calculate everything and store it in separate lists again, finally, using a function from gspread
     in a simple loop, it updates the columns in the specified range with the information.
 
     Python was used because of the simplicity and the existense of the previously created library gspread, making the funcitionality and writing much simpler
